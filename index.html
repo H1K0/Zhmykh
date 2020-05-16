@@ -30,17 +30,33 @@
         list-style: none;
       }
       .contacts li{
-        padding: 5px 2px;
-        text-align: center;
+        padding: 8px 2px;
       }
-      .contacts img{
-        width: 15px;
-        height: 15px;
-      }
-      .head{background-color: #77e}
+      .head{background-color: #77e;text-align: center}
       .mail{background-color: #aae}
       .tel{background-color: #bbe}
       .nick{background-color: #dde}
+      .contacts .data{
+        position: relative;
+        margin-left: 50px;
+      }
+      .contacts .data:before{
+        content: "";
+        position: absolute;
+        left: -25px;
+        width: 14px;
+        height: 14px;
+        background-size: cover;
+      }
+      .mail .data:before{
+        background-image: url(mail.png);
+      }
+      .tel .data:before{
+        background-image: url(phone.png);
+      }
+      .nick .data:before{
+        background-image: url(skype.png);
+      }
       .main{
         position: absolute;
         left:250px;
@@ -104,9 +120,9 @@
     </ul>
     <ul class="contacts">
       <li class="head">Контакты</li>
-      <li class="mail"><img src="mail.png" alt="mail">pochta@mail.ru</li>
-      <li class="tel"><img src="phone.png" alt="phone">+79042357655</li>
-      <li class="nick"><img src="skype.png" alt="skype">nickname</li>
+      <li class="mail"><div class="data">pochta@mail.ru</div></li>
+      <li class="tel"><div class="data">+79042357655</div></li>
+      <li class="nick"><div class="data">borov2281488</div></li>
     </ul>
     <div class="main">
       <div class="header">
